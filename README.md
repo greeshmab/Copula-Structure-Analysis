@@ -12,6 +12,8 @@ Consider a Copula Factor model and estimators CX = C(L,V )ξ where L ∈ Rd and 
 Compare the empirical distribution of T with the limiting Chi- Square distribution with Kendall’s based correlation estimators rT : = vec(RT), Tτ :=nmin[D{r,r(i)(θ)|Γτ}].
 ### Classical Factor model 
 X = (L, V )ξ here ξ ∼ εm+d(0, I, G), where vector of em- pirical correlations is remp = vec(Remp), Tρ := nmin[D{r,r(i)(θ)|Γρ}]. Disadvantage of classical correlation estimator remp is that Γe depends on distribution of X.
+
+
 We simulated 100 IID samples of length d=10 of t3 Copula. For Copula correlation ma- trix, We calculated corresponding Kandall’s τ matrix and corresponding Kendall’s τ based correlation estimator. For model selection we started with one factor model. For i=1, and 95% confidence test, the null hypothesis of having 1 factor model got rejected. Where as for i=2, the test statistics are less than the corresponding χ2 distribution value. Hence, We continued with the 2-factor model. For sanity check we plotted both 1-Factor and 2-Factor models.
 • For 1-Factor model, the empirical values are way off with respect to Chi-Square dis- tribution since the null hypothesis was rejected.
 • For 2-Factor model, we plotted for two sets of samples. The qq-plot is more alighed with 2 distribution for larger n values. The following are the QQ-plots for 2 factor model n=10, n=100
