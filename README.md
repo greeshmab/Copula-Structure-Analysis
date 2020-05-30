@@ -15,8 +15,8 @@ X = (L, V )ξ here ξ ∼ εm+d(0, I, G), where vector of em- pirical correlatio
 
 
 We simulated 100 IID samples of length d=10 of t3 Copula. For Copula correlation ma- trix, We calculated corresponding Kandall’s τ matrix and corresponding Kendall’s τ based correlation estimator. For model selection we started with one factor model. For i=1, and 95% confidence test, the null hypothesis of having 1 factor model got rejected. Where as for i=2, the test statistics are less than the corresponding χ2 distribution value. Hence, We continued with the 2-factor model. For sanity check we plotted both 1-Factor and 2-Factor models.
-• For 1-Factor model, the empirical values are way off with respect to Chi-Square dis- tribution since the null hypothesis was rejected.
-• For 2-Factor model, we plotted for two sets of samples. The qq-plot is more alighed with 2 distribution for larger n values. The following are the QQ-plots for 2 factor model n=10, n=100
+⋅⋅* For 1-Factor model, the empirical values are way off with respect to Chi-Square dis- tribution since the null hypothesis was rejected.
+⋅⋅* For 2-Factor model, we plotted for two sets of samples. The qq-plot is more alighed with 2 distribution for larger n values. The following are the QQ-plots for 2 factor model n=10, n=100
 
 
 
@@ -26,11 +26,11 @@ We tried to fit both normal and t-copula for the whole data set and tested goodn
 
 ### Test Statistic Calculations
 In order to calculate the optimal min value of test statistic, we used python SciPy optimize and fmin() function. It uses a Nelder-Mead simplex algorithm to find the minimum of function of one or more variables.
-• For the initial value, we used Factor Analysis from sklearn. decomposition Factor Analysis which is a simple linear generative model with Gaussian Latent Variables.
-• For number of factors selection we started with one factor model. For n=1 and 2, and 95% confidence test, the null hypothesis of having 1 factor model got rejected. Where as for n=3, the test statistics are less than the corresponding χ2 distribution value. Hence, We continued with the 3-factor model.
-• For 3rd factor there wasn’t any significance as the factor was clear indication of oil price i.e factor value for oil was 1 and rest were zero. Hence the factor was dropped from analysis.
+⋅⋅* For the initial value, we used Factor Analysis from sklearn. decomposition Factor Analysis which is a simple linear generative model with Gaussian Latent Variables.
+⋅⋅* For number of factors selection we started with one factor model. For n=1 and 2, and 95% confidence test, the null hypothesis of having 1 factor model got rejected. Where as for n=3, the test statistics are less than the corresponding χ2 distribution value. Hence, We continued with the 3-factor model.
+⋅⋅* For 3rd factor there wasn’t any significance as the factor was clear indication of oil price i.e factor value for oil was 1 and rest were zero. Hence the factor was dropped from analysis.
 
 ### Conclusions
-• For Factor 1 : We can observe that both exchange currency rates are near zero. But oil, gold are negative. S& P500 which is a benchmark index is positive. We can interpret this as a commodity factor
-• For Factor 2: We see that both exchange rates are negative , near to -1. Whereas the oil, SnP500 and gold are near zero. This is a factor which is not even tracked by benchmark. We can call this as currency factor.
-• These factors aren’t common factors which are indicated by market or any sector. These factors if analysed more can give a greater insight to the dependence structure between the given securities.
+⋅⋅* For Factor 1 : We can observe that both exchange currency rates are near zero. But oil, gold are negative. S& P500 which is a benchmark index is positive. We can interpret this as a commodity factor
+⋅⋅* For Factor 2: We see that both exchange rates are negative , near to -1. Whereas the oil, SnP500 and gold are near zero. This is a factor which is not even tracked by benchmark. We can call this as currency factor.
+⋅⋅* These factors aren’t common factors which are indicated by market or any sector. These factors if analysed more can give a greater insight to the dependence structure between the given securities.
